@@ -1,9 +1,14 @@
 "
 " dotvim : https://github.com/dotphiles/dotvim
+" dotvim (fork): git@github.com:samuelbernardo-talkdesk/dotvim.git
+" dotfiles: git@github.com:samuelbernardo-talkdesk/dotfiles.git
+" ensime: http://ensime.org/editors/vim/install/
 "
 " Setup vim and load required plugins before dotvim
+" and integrate with ensime engine
 "
 " Authors:
+"   Samuel Bernardo <samuelbernardo@tecnico.ulisboa.pt>
 "   Ben O'Hara <bohara@gmail.com>
 "
 
@@ -147,6 +152,17 @@ set matchtime=1
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+" Typechecking after writing
+autocmd BufWritePost *.scala silent :EnTypeCheck
+
+" Easy Type Inspection
+nnoremap <localleader>t :EnTypeCheck<CR>
+
+" Customize the browser used for :EnDocBrowse by setting an environment variable, in your shell initialization
+" defining the following variable
+" $ export BROWSER="firefox %s"
+
 
 " ==========================================================================================================================
 " ====== VISUAL ============================================================================================================
