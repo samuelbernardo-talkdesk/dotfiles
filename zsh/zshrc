@@ -1,0 +1,26 @@
+export BASEDIR=$HOME/.config/$USER
+
+# Enable 256color terminal
+#if [ -e /usr/share/terminfo/s/screen-256color ]; then
+#        export TERM='screen-256color'
+#else
+#        export TERM='xterm-color'
+#fi
+
+echo "Setting Git author to Samuel Bernardo"
+export GIT_AUTHOR_NAME="Samuel Bernardo"
+export GIT_AUTHOR_EMAIL="samuelbernardo.mail@gmail.com"
+
+# Ensure Vim uses the proper settings
+alias vim='vim -u $BASEDIR/vimrc'
+alias view='view -u $BASEDIR/vimrc'
+
+export EDITOR='vim -u $BASEDIR/vimrc'
+export VISUAL='vim -u $BASEDIR/vimrc'
+
+# libvirt
+export VAGRANT_DEFAULT_PROVIDER=libvirt
+
+# grep
+alias grep='grep --color=auto -IHn --exclude=*~ --exclude-dir=.bzr --exclude-dir=.svn --exclude-dir=.CVSROOT --exclude=*.pyc --exclude-dir=.git'
+
