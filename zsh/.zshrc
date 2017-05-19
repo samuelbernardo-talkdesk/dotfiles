@@ -15,8 +15,9 @@ plugins=(git scala sbt svn systemd)
 
 #KEYS BINDINGS
 autoload zkbd
-[[ ! -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE ]] && zkbd
-source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
+[[ ! -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE && ! -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$DISPLAY ]] && zkbd
+[[ -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE ]] && source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
+[[ -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$DISPLAY ]] && source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$DISPLAY
 
 [[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
 [[ -n ${key[Insert]} ]] && bindkey "${key[Insert]}" overwrite-mode
