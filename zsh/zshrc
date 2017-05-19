@@ -22,5 +22,6 @@ export VISUAL='vim -u $BASEDIR/vimrc'
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 # grep
-alias grep='grep --color=auto -IHn --exclude=*~ --exclude-dir=.bzr --exclude-dir=.svn --exclude-dir=.CVSROOT --exclude=*.pyc --exclude-dir=.git'
+#alias grep='grep --color=auto -IHn --exclude=*~ --exclude-dir=.bzr --exclude-dir=.svn --exclude-dir=.CVSROOT --exclude=*.pyc --exclude-dir=.git'
+alias grep='grep --color=auto -IHn'
 
