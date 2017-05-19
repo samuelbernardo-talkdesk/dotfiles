@@ -14,6 +14,7 @@ source $ZSH/../zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 plugins=(git scala sbt svn systemd)
 
 #KEYS BINDINGS
+unsetopt MULTIBYTE
 autoload zkbd
 [[ ! -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE && ! -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$DISPLAY ]] && zkbd
 [[ -f ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE ]] && source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
