@@ -1,6 +1,6 @@
 autoload -U compinit promptinit
 compinit
-promptinit; prompt gentoo
+promptinit; prompt fade red
 zstyle ':completion::complete:*' use-cache 1
 
 ZSH_THEME=candy
