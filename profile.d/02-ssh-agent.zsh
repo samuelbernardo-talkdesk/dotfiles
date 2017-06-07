@@ -45,7 +45,9 @@ fi
 
 # if your keys are not stored in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub, you'll need
 # to paste the proper path after ssh-add defining $HOME/.ssh/agent-keys.env
-source "$HOME/.ssh/agent-keys.env"
+if [ -f "$HOME/.ssh/agent-keys.env" ]; then
+  source "$HOME/.ssh/agent-keys.env"
+fi
 if ! agent_is_running; then
     agent_start
     ssh-add ${=SSH_AGENT_KEYS}
