@@ -12,6 +12,12 @@
 "   Ben O'Hara <bohara@gmail.com>
 "
 
+" vim-latex plugin
+filetype plugin indent on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+
 " Call dotvim
 source ~/.vim/dotvim.vim
 
@@ -33,6 +39,7 @@ if has("user_commands")
   Bundle 'luochen1990/rainbow'
   Bundle 'xuyuanp/nerdtree-git-plugin'
   Bundle 'airblade/vim-gitgutter'
+  Bundle 'vim-airline/vim-airline-themes'
 endif
 
 " Override colorscheme from base16
