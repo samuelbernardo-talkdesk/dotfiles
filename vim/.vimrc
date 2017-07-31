@@ -48,7 +48,7 @@ let g:dotvim_colorscheme = 'jellybeans'
 let g:rainbow_active = 1
 
 " ensime-server socket error
-let ensime_server_v2=1
+"let ensime_server_v2=1
 
 " Customize to your needs...
 
