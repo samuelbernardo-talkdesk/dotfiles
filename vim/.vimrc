@@ -243,3 +243,12 @@ set scrolloff=4
 " Show the command as it's being typed in the lower right
 set showcmd
 
+" Line wrap
+set wrap
+set linebreak
+set nolist  " list disables linebreak
+set textwidth=0
+set wrapmargin=0
+set formatoptions-=t
+set formatoptions+=l
+
